@@ -1,0 +1,12 @@
+on:
+  pull_request:
+    types: [labeled]
+jobs:
+  label_created:
+    # This job only runs for pull request comments
+    name: Label Created
+    if: ${{ github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo '${{toJSON(github)}}'

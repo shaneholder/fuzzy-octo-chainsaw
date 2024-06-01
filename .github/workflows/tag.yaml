@@ -1,0 +1,13 @@
+on:
+  push:
+    tags:
+      - development
+      - production
+
+jobs:
+  tag_pushed:
+    name: Tag Pushed
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo '${{toJSON(github)}}'
