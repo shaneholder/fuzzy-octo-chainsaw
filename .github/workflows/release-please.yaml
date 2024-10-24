@@ -31,13 +31,13 @@ jobs:
             ${{ toJSON (steps.release) }}
           EOF
   
-  show-release-please:
-    needs:
-      - release-please
-    runs-on: ubuntu-latest
-    steps:
-      - name: Show Release Context
-        run: |
-          echo <<EOF
-            ${{ toJSON (needs.release-please.outputs.releases_created) }}
-          EOF
+  # show-release-please:
+  #   needs:
+  #     - release-please
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Show Release Context
+  #       run: |
+  #         echo <<EOF
+  #           ${{ toJSON (needs.release-please.outputs.releases_created) }}
+  #         EOF
