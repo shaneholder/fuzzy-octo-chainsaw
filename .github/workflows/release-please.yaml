@@ -13,6 +13,7 @@ jobs:
   release-please:
     runs-on: ubuntu-latest
     outputs:
+      release: ${{ steps.release }}     
       releases_created: ${{ steps.release.outputs.releases_created }}
       paths_released: ${{ steps.release.outputs.paths_released }}
       prs_created: ${{ steps.release.outputs.prs_created }}
