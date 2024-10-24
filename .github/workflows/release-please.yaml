@@ -20,7 +20,12 @@ jobs:
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
-
+      - name: Show Release Context
+        run: |
+          echo <<EOF
+            ${{ toJSON (steps.release) }}
+          EOF
+  
   show-release-please:
     needs:
       - release-please
