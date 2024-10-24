@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+name: release-please
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release: ${{ steps.release.outputs.release }}
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  show-release-please:
+    needs:
+      - release-please
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Release Context
+        run: |
+          echo <<EOF
+            ${{ toJSON (needs.release-please.outputs.release) }}
+          EOF
