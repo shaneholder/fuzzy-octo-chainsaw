@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/shaneholder/fuzzy-octo-chainsaw/compare/v1.0.0...v1.1.0) (2024-10-24)
+
+
+### Features
+
+* one ([#11](https://github.com/shaneholder/fuzzy-octo-chainsaw/issues/11)) ([08564f5](https://github.com/shaneholder/fuzzy-octo-chainsaw/commit/08564f520768bb7fb3fc74f4f660a38b67fea816))
+
 ## 1.0.0 (2024-10-24)
 
 
