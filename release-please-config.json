@@ -1,10 +1,12 @@
 {
   "packages": {
     "proj1": {
-      "release-type": "simple"
+      "release-type": "simple",
+      "component": "proj1"
     },
     "proj2": {
-      "release-type": "simple"
+      "release-type": "simple",
+      "component": "proj2"
     }
   }
 }
